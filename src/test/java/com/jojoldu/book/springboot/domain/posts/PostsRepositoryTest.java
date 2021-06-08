@@ -4,6 +4,8 @@ import junit.framework.TestCase;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -16,6 +18,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest
 public class PostsRepositoryTest extends TestCase {
 
+    private static Logger log  = LoggerFactory.getLogger(PostsRepositoryTest.class);
     @Autowired
     PostsRepository postsRepository;
 
@@ -41,6 +44,8 @@ public class PostsRepositoryTest extends TestCase {
         //then
         Posts posts = postsList.get(0);
         assertThat(posts.getTitle()).isEqualTo( title);
+        assertThat(posts.getId()).isGreaterThan(0l);
+        log.info(String.format("=============== id:%d",posts.getId() ));
         assertThat(posts.getContent()).isEqualTo(content);
 
     }
