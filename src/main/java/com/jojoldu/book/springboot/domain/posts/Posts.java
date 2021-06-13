@@ -12,7 +12,7 @@ import javax.persistence.*;
 // java의 카멜케이스 이름을  언더스코어 네이밍으로 테이블 이름을 매칭한다.
 // ex) SalesManager -> sales_manager
 @Entity
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     //    pk
     @Id
@@ -33,5 +33,10 @@ public class Posts {
         this.title =title;
         this.content =content;
         this.author = author;
+    }
+
+    public void update(String title, String content) {
+        this.title =title;
+        this.content=content;
     }
 }

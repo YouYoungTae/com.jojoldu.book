@@ -33,6 +33,7 @@ dependencies {
     compile('com.h2database:h2')
     compile('org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16')
     compile('org.logback-extensions:logback-ext-spring:0.1.2')
+    compile('org.springframework.boot:spring-boot-starter-mustache')
     annotationProcessor('org.projectlombok:lombok')
 
     testCompile('org.projectlombok:lombok')
