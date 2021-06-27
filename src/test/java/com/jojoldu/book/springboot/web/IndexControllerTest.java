@@ -28,7 +28,7 @@ public class IndexControllerTest {
         String body =this.testRestTemplate.getForObject("/" ,String.class);
         log.info("============>" + body);
         //then
-        assertThat(body).contains("스프링 부트");
+        assertThat(body).contains("스프링부트");
     }
 
 }
