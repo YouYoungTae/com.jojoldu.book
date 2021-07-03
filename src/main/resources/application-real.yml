@@ -1,10 +1,16 @@
+server:
+  port: 8080
 spring:
-  profiles.inlcude: oauth,real-db
   jpa:
     properties:
-      hibernate.dialect : org.hibernate.dialect.MySQL5InnoDBDialect
-  session:
-    store-type : jdbc
+      hibernate:
+        type: trace
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        format_sql : true
+    show_sql: true
+  profiles.include: oauth,real-db
   output:
     ansi:
-      enabled: always
+      enabled : always
+  session:
+    store-type: jdbc

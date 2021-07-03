@@ -1,5 +1,5 @@
 server:
-  port: 9190
+  port: 9091
 spring:
   jpa:
     properties:
@@ -11,7 +11,7 @@ spring:
   h2:
     console:
       enabled: true
-  profiles.include: oauth, real-db
+  profiles.include: oauth,real-db
   output:
     ansi:
       enabled : always
