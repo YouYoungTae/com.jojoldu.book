@@ -11,7 +11,7 @@ spring:
   h2:
     console:
       enabled: true
-  profiles.include: oauth
+  profiles.include: oauth, real-db
   output:
     ansi:
       enabled : always
