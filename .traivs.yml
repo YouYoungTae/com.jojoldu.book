@@ -3,16 +3,16 @@ jdk:
   - openjdk8
 
 branches:
-  only :
+  only:
     - master
-# Travis Ci 서버의 home
 
+# Travis CI 서버의 Home
 cache:
   directories:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
+
 script: "./gradlew clean build"
-#ci 실행완료시 메일로 알람
 
 notifications :
   email:
