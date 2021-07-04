@@ -47,4 +47,4 @@ before_install :
 notifications :
   email:
     recipients:
-      - YouYoungTae@outlook.kr
+      - ytreyt@naver.com
