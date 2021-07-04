@@ -33,13 +33,13 @@ deploy:
   - provider: codedeploy
     access_key_id: $AWS_ACCESS_KEY #TRAVIS에 설정된 값
     secret_access_key: $AWS_SECRET_KEY
-    bucket: arn:aws:s3:::youngtaewebapp
+    bucket: youngtaewebapp
     key: com.jojoldu.book.zip
     bundle_type: zip
     application: youngtaewebb
     deployment_group: youngtaeweb-group
     wait-until-deployed: true
-
+    region: us-east-2
 
 before_install :
   - chmod +x gradlew
@@ -48,4 +48,3 @@ notifications :
   email:
     recipients:
       - YouYoungTae@outlook.kr
-      - ytreyt@naver.com
