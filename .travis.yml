@@ -36,7 +36,7 @@ deploy:
     bucket: youngtaewebapp
     key: com.jojoldu.book.zip
     bundle_type: zip
-    application: com.jojoldu.book
+    application: youngtaeweb
     deployment_group: youngtaeweb-group
     wait-until-deployed: true
 
