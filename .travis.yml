@@ -36,8 +36,8 @@ deploy:
     bucket: youngtaewebapp
     key: com.jojoldu.book.zip
     bundle_type: zip
-    application: youngtaewebb
-    deployment_group: youngtaeweb-group
+    application: youngtaeWeb-service
+    deployment_group: youngtaeWeb-service-group
     wait-until-deployed: true
     region: us-east-2
 
