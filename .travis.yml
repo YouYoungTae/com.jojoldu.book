@@ -20,6 +20,7 @@ before_deploy:
   - zip -r com.jojoldu.book.zip ./*
   - mv com.jojoldu.book.zip deploy/com.jojoldu.book.zip
 
+
 deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY #TRAVIS에 설정된 값
